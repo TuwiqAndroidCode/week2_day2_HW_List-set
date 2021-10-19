@@ -19,11 +19,24 @@ fun  main() {
     println(list)
 //****************************************(Options)********************************************
 //Create a text file and read it,Create a list of 10 number
-    val list2 = File("Data/MaxNum.Text").readText().split("/n")
+    val list2 = File("Data/MaxNum.text").readLines().toMutableList()
+    //val list2 = File("Data/MaxNum.Text").readText().split("/n")
     println(list2)
+    //create a for loop then create new variable named max then check
+    // if the elements greater than max or not.
+    // like what we have done in the max number in if condition
+    var max = list2 [list2.size-1]
+    for (index in 0 .. list2.size-1 ){
+        if(max < list2[index]) {  max=list2[index]}
+    }
     // return the maximum number
-    // i don't know (;_;) </3
+    println("the list = $list2 , and the Max value is = $max")
+
 }
+
+
+
+
 
 
 
